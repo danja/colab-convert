@@ -14,7 +14,7 @@ UnboundLocalError: cannot access local variable 'main_metadata' where it is not 
 ```
 So I've tweaked the code to initialize `main_metadata` (and `cells`). 
 
-I haven't checked anything else, but this does allow it to run.
+I haven't checked anything else (not really ready for a pull request), but this does allow it to run.
 
 ---
 
