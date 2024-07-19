@@ -306,6 +306,30 @@ def nb2py(notebook, flags):
 # convert python to notebook
 def py2nb(py_str, flags):
 
+    ### danny / claude
+    # Initialize cells and main_metadata
+    cells = []
+    main_metadata = {
+        "anaconda-cloud": {},
+        "kernelspec": {
+            "display_name": "Python 3",
+            "language": "python",
+            "name": "python3"
+        },
+        "language_info": {
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "file_extension": ".py",
+            "mimetype": "text/x-python",
+            "name": "python",
+            "nbconvert_exporter": "python",
+            "pygments_lexer": "ipython3",
+            "version": "3.6.1"
+        }
+    }
+    
     # remove leading header comment
     if py_str.startswith(header_comment):
         py_str = py_str[len(header_comment):]

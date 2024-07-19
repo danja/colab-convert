@@ -2,6 +2,22 @@
 
 Converts ipython/Google Colab Notebooks into runable Python code and vice versa 
 
+---
+
+**danja note :** when installed with pip or from the original source, this version `colab-convert==2.0.5` when given eg.
+```
+colab-convert  main.py main.ipynb
+```
+crashed with the error :
+```
+UnboundLocalError: cannot access local variable 'main_metadata' where it is not associated with a value
+```
+So I've tweaked the code to initialize `main_metadata` (and `cells`). 
+
+I haven't checked anything else, but this does allow it to run.
+
+---
+
 ## Features
 
 - converts files: .ipynb to .py and .py to .ipynb.
